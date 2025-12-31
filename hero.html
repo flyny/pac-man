@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hero Adventure</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Later you can create hero.js and include it here -->
-  <!-- <script src="hero.js" defer></script> -->
+    <meta charset="UTF-8">
+    <title>Hero Adventure</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Load your game logic -->
+    <script src="hero.js" defer></script>
 </head>
 <body>
-  <h1>Hero Adventure</h1>
-  <p>Coming soon: collect resources, fight animals, and explore the world!</p>
+    <h1>Hero Adventure</h1>
+    <p>Coming soon: collect resources, fight animals, and explore the world!</p>
 
-  <!-- Example placeholder for your future game area -->
-  <div id="hero-game-container">
-    <!-- Your 2D world / canvas / grid will go here -->
-  </div>
+    <!-- Game Area -->
+    <div id="hero-game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div class="hint">Use Arrow Keys to move (map first, player next).</div>
+    </div>
+    <div id="mobile-controls" aria-label="Mobile controls">
+        <div class="dpad">
+            <button class="btn up" data-key="ArrowUp">▲</button>
+            <button class="btn left" data-key="ArrowLeft">◀</button>
+            <button class="btn down" data-key="ArrowDown">▼</button>
+            <button class="btn right" data-key="ArrowRight">▶</button>
+        </div>
 
-  <p><a href="index.html">← Back to Home</a></p>
+        <button class="btn attack" id="attackBtn">ATTACK</button>
+    </div>
+    <p><a href="index.html">← Back to Home</a></p>
 </body>
 </html>
